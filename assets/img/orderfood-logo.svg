@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 120" role="img" aria-label="Order Food">
+  <defs>
+    <linearGradient id="of" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FF8A3D"/>
+      <stop offset="1" stop-color="#E8452C"/>
+    </linearGradient>
+  </defs>
+  <rect x="10" y="14" width="92" height="92" rx="24" fill="url(#of)"/>
+  <path d="M34 50h44l-4 36a6 6 0 0 1-6 5H44a6 6 0 0 1-6-5z" fill="#fff"/>
+  <path d="M45 50v-6a11 11 0 0 1 22 0v6" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="56" cy="69" r="7" fill="url(#of)"/>
+  <text x="118" y="60" font-family="Sora, Segoe UI, Arial, sans-serif" font-size="34" font-weight="700" fill="#1B1B1F">Order</text>
+  <text x="118" y="96" font-family="Sora, Segoe UI, Arial, sans-serif" font-size="34" font-weight="700" fill="#E8452C">Food</text>
+</svg>
