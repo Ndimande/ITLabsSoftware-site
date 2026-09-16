@@ -42,4 +42,25 @@
       'mailto:ITLabsSoftware@chessalot.co.za?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
     note.textContent = 'Your email app should open with the message ready to send.';
   });
+
+  // Fade sections in as they enter the viewport
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if ('IntersectionObserver' in window && !reduceMotion) {
+    const revealTargets = document.querySelectorAll(
+      '.service, .product, .steps li, .contact-wrap, .founder-photo, #about .col-lg-7'
+    );
+    revealTargets.forEach((el) => el.classList.add('reveal'));
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            io.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15, rootMargin: '0px 0px -40px 0px' }
+    );
+    revealTargets.forEach((el) => io.observe(el));
+  }
 })();
